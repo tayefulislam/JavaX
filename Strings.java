@@ -8,7 +8,7 @@ public class Strings {
         String name = "My name is " + sc.nextLine();
         // // compare String
 
-        String address1 = "Zhaka";
+        String address1 = "Dhaka";
         // String adddres2 = "DDASD";
 
         // System.out.println(address1.compareTo(adddres2));
