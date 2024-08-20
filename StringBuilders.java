@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.*;
 
 public class StringBuilders {
 
@@ -6,7 +7,9 @@ public class StringBuilders {
 
     {
 
-        StringBuilder name = new StringBuilder("Tusha");
+        Scanner sc = new Scanner(System.in);
+
+        // StringBuilder name = new StringBuilder("Tusha");
 
         // System.out.println(name);
 
@@ -37,7 +40,7 @@ public class StringBuilders {
         // System.out.println(hello.length());
 
         // reverse
-        StringBuilder reName = new StringBuilder("");
+        // StringBuilder reName = new StringBuilder("");
 
         // for (int i = name.length() - 1; i >= 0; i--) {
         // reName.append(name.charAt(i));
@@ -45,26 +48,35 @@ public class StringBuilders {
 
         // System.out.println(reName);
 
-        for (int i = 0; i < name.length() / 2; i++) {
+        // for (int i = 0; i < name.length() / 2; i++) {
 
-            /*
-             * 
-            */
+        // /*
+        // *
+        // */
 
-            int front = i;
-            int back = name.length() - 1 - i; // 6-1-0 , 6-1-1 , 6-1-2
+        // int front = i;
+        // int back = name.length() - 1 - i; // 6-1-0 , 6-1-1 , 6-1-2
 
-            char frontChar = name.charAt(front);
-            char backChar = name.charAt(back);
+        // char frontChar = name.charAt(front);
+        // char backChar = name.charAt(back);
 
-            name.setCharAt(back, frontChar);
-            name.setCharAt(front, backChar);
+        // name.setCharAt(back, frontChar);
+        // name.setCharAt(front, backChar);
 
-            System.out.println(name);
+        // System.out.println(name);
 
-        }
-        System.out.println(name);
+        // }
+        // System.out.println(name);
 
+        // Check if a String is a Palindrome:
+
+        StringBuilder word = new StringBuilder(sc.nextLine());
+        System.out.println(word);
+
+        boolean isPalindrome = sc.nextLine().equalsIgnoreCase(word.reverse().toString());
+        // level
+
+        System.out.println(isPalindrome);
     }
 
 }
