@@ -9,26 +9,52 @@ public class Sorting {
 
     public static void main(String arg[]) {
 
-        int number[] = { 9, 6, 7, 8, 5, 3, 2, 1 };
+        int number[] = { 7, 8, 5, 2, 3 };
+        // Selection Sort
+        for (int i = 0; i < number.length; i++) {
+            int smallest = i;
 
-        // Bubble Sort
+            for (int j = i + 1; j < number.length; j++) {
 
-        for (int i = 0; i < number.length - 1; i++) {
+                if (number[j] < number[smallest]) {
 
-            for (int j = 0; j < number.length - i - 1; j++) {
-
-                if (number[j] > number[j + 1]) {
-                    int tem = number[j];
-
-                    number[j] = number[j + 1];
-                    number[j + 1] = tem;
-
+                    smallest = j;
                 }
+
+                // swap
+
+                int temp = number[smallest];
+
+                number[smallest] = number[i];
+                number[i] = temp;
 
             }
 
         }
-
         printArray(number);
+
+        // Bubble Sort
+
+        /*
+         * for (int i = 0; i < number.length; i++) {
+         * 
+         * for (int j = 0; j < number.length - i - 1; j++) {
+         * 
+         * if (number[j] > number[j + 1]) {
+         * int tem = number[j];
+         * 
+         * number[j] = number[j + 1];
+         * number[j + 1] = tem;
+         * 
+         * }
+         * 
+         * }
+         * 
+         * }
+         * 
+         * printArray(number);
+         * 
+         */
+
     }
 }
