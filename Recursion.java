@@ -19,21 +19,41 @@ public class Recursion {
     // printSum(start + 1, n, sum);
 
     // }
-    public static int printFactorial(int n) {
+    // public static int printFactorial(int n) {
 
-        if (n == 1 || n == 1) {
+    // if (n == 1 || n == 1) {
+    // return 1;
+    // }
+
+    // int calfact_nm1 = printFactorial(n - 1);
+    // int cal_total = n * calfact_nm1;
+    // return cal_total;
+    // }
+
+    // Print Fibonacchi se
+
+    // Q : Print x^n (Stack height n )
+
+    public static int calPower(int x, int n) {
+
+        // base : 1
+        if (n == 0) {
             return 1;
         }
+        // base case : 2
+        if (x == 0) {
+            return 0;
+        }
+        int pow = x * calPower(x, n - 1);
 
-        int calfact_nm1 = printFactorial(n - 1);
-        int cal_total = n * calfact_nm1;
-        return cal_total;
+        return pow;
     }
 
     public static void main(String arg[]) {
         // printNumber(1, 10);
         // printSum(1, 5, 0);
-        System.out.println(printFactorial(5));
+        // System.out.println(printFactorial(5));
 
+        System.out.println(calPower(2, 3));
     }
 }
