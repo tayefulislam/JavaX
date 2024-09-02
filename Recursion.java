@@ -44,9 +44,22 @@ public class Recursion {
         if (x == 0) {
             return 0;
         }
-        int pow = x * calPower(x, n - 1);
+        // Normal Mood Start //
 
-        return pow;
+        // int pow = x * calPower(x, n - 1);
+
+        // return pow;
+
+        // Normal Mood End //
+
+        // Stack height (logn)
+
+        if (n % 2 == 0) {
+            return calPower(x, n / 2) * calPower(x, n / 2);
+        } else {
+            return calPower(x, n / 2) * calPower(x, n / 2) * x;
+        }
+
     }
 
     public static void main(String arg[]) {
@@ -54,6 +67,6 @@ public class Recursion {
         // printSum(1, 5, 0);
         // System.out.println(printFactorial(5));
 
-        System.out.println(calPower(2, 3));
+        System.out.println(calPower(2, 5));
     }
 }
